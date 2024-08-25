@@ -11,9 +11,10 @@ class Sistema {
 
 public:
 
-	void menuPrincipal();
-	void menuSecundario(int);
-	void menuArchivo();
+	void menuPrincipal(int *);
+	void menuSecundario(int*);
+	void menuArchivo(int*);
+	void infoEstudiante();
 	void menuMantenimiento();
 	void menuReserva();
 	void menuVenta();

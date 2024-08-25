@@ -5,22 +5,14 @@
 int main()
 {//crear ops como puntero 
     int ops;
-    int ;
 
     Sistema menuu;
     do {
-        menuu.menuPrincipal();
-        std::cin >> ops;
+        menuu.menuPrincipal(&ops);
+      
 
-        menuu.menuSecundario(ops);
-        switch (ops != 0) {
-
-        case 1:    break;
-
-        case 2:    break;
-        case 3:    break;
-        case 4:    break;
-        }
+        menuu.menuSecundario(&ops);
+      
     }while (ops != 0);
 }
 
