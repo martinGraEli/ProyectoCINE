@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayPelicula.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pelicula.cpp" />
     <ClCompile Include="Sistema.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArrayPelicula.h" />
     <ClInclude Include="Pelicula.h" />
     <ClInclude Include="Sistema.h" />
   </ItemGroup>

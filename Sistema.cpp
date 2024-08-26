@@ -27,7 +27,7 @@ void Sistema::menuSecundario(int *opcion) {
 		menuArchivo(opcion);
 		system("pause");
 		break;
-	case 2:
+	
 	}
 }
 void Sistema::menuArchivo(int *ops) {

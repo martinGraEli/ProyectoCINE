@@ -14,6 +14,7 @@ Pelicula::Pelicula(std::string nombre, int age, int duracion, std::string pais, 
 	this->pais = pais;
 	this->resena = resena;
 }
+
 std::string Pelicula::getNombre() {
 	return this->nombre;
 }
@@ -46,7 +47,7 @@ void Pelicula::addNewPelicula() {
 }
 void Pelicula:: informacionPelicula() {
 	std::cout << "\nNombre:\t " << this->nombre <<".";
-	std::cout << "\nDuracion:\t " << this->duracion << ".";
+	std::cout << "\nDuracion: " << this->duracion << " min.";
 	std::cout << "\nAno:\t " << this->age << ".";
 	std::cout << "\nPais:\t " << this->pais << ".";
 	std::cout << "\nResena:\t " << this->resena << ".\n";
