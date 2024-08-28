@@ -72,10 +72,19 @@
 
         menuu.menuSecundario(&ops);
 
-    }while (ops != 0);*/
+    }while (ops != 0);
+    
+    
+  */
     
 
 int main(){
-
+     int opcion;
+    Sistema sistemita;
+    do {
+        sistemita.menuPrincipal(&opcion);
+        sistemita.menuSecundario(&opcion);
+    } while (opcion != 0);
+    
 }
 

@@ -9,7 +9,7 @@ void Sistema::infoEstudiante() {
 }
 
 void Sistema::menuPrincipal(int *ops) {
-
+	system("cls");
 		std::cout<<("\t-_-_-Menu Principal-_-_-\n\n");
 	
 		std::cout << ("  \t\t1)  Archivo\n");
@@ -20,22 +20,35 @@ void Sistema::menuPrincipal(int *ops) {
 		//system("pause");
 		system("cls");
 }
-void Sistema::menuSecundario(int *opcion) {
-	switch (*opcion != 0) {
 
+void Sistema::menuSecundario(int *opcion) {
+	
+	switch (*opcion) {
+	
 	case 1:
 		menuArchivo(opcion);
 		system("pause");
 		break;
-	
+	case 2:
+		menuMantenimiento();
+		system("pause");
+		break;
+	case 3:
+		menuReserva();
+		system("pause");
+		break;
+	case 4:
+		menuVenta();
+		system("pause");
+		break;
 	}
 }
+
 void Sistema::menuArchivo(int *ops) {
 	
-	
 	do {
-		std::cout << "Digite la opcion de la accion que desea realizar \n";
-		std::cout << "1. Acerca de\n\n 2. Salir";
+		std::cout << "Digite la opcion de la accion que desea realizar\n";
+		std::cout << "1. Acerca de\n2. Volver al menu Principal\n3. Salir del sistema\n";
 		std::cin >> *ops;
 		system("cls");
 		if (*ops == 1) {
@@ -43,11 +56,30 @@ void Sistema::menuArchivo(int *ops) {
 
 			system("cls");
 		}
-		 else if (*ops == 2) {
+		 else if (*ops == 3) {
 			*ops = 0;
 		}
 	
 		
-	}while(*ops != 0);
+	}while(*ops != 0 && *ops!= 3 && *ops != 2);
+}		
+
+/*falta hacerlo*/void Sistema::menuMantenimiento()
+{
+	system("cls");
+	std::cout << "\n PROXIMAMENTE\tse incluira en mantenimiento las opciones de:\n\t\tPeliculas.\n\t\tSalas.\n\t\tHorarios;\n\n\n";
+	
+	
+} 
+
+/*falta hacerlo*/void Sistema::menuReserva() {
+	//system("cls");
+	std::cout << "\n PROXIMAMENTE\t se incluira la opcion de:\n\t\tReserva Peliculas.\n\n\n";
+
 }
 
+/*falta hacerlo*/void Sistema::menuVenta() {
+	system("cls");
+	std::cout << "\n PROXIMAMENTE\t se incluira la opcion de\n\t\tVenta de Peliculas.\n\n\n";
+
+}
