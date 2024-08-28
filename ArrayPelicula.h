@@ -3,7 +3,8 @@
 class ArrayPelicula
 {
 private:
-	int sizeMax = 50;
+
+	int sizeMax = 50; //modificar para que el usuario elija la cantidad maxima
 	Pelicula* vectorPelis;
 	int cantidad = 0;
 public:

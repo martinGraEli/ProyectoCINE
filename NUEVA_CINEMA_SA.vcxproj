@@ -128,13 +128,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ArrayPelicula.cpp" />
+    <ClCompile Include="Asiento.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pelicula.cpp" />
+    <ClCompile Include="Sala.cpp" />
     <ClCompile Include="Sistema.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayPelicula.h" />
+    <ClInclude Include="Asiento.h" />
     <ClInclude Include="Pelicula.h" />
+    <ClInclude Include="Sala.h" />
     <ClInclude Include="Sistema.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
