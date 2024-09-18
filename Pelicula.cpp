@@ -13,6 +13,7 @@ Pelicula::Pelicula(std::string nombre, int age, int duracion, std::string pais, 
 	this->duracion = duracion;
 	this->pais = pais;
 	this->resena = resena;
+	
 }
 
 std::string Pelicula::getNombre() {
@@ -31,8 +32,10 @@ std::string  Pelicula::getPais() {
 	return this->pais;
 }
 
-void Pelicula::addNewPelicula() {
 
+
+void Pelicula::addNewPelicula(int cantSala) {
+	
 	std::cout << "\nDigite el nombre de la pelicula:\n";
 	std::cin >> this->nombre;
 	std::cout << "\nDigite el ano de la pelicula:\n";
@@ -46,6 +49,7 @@ void Pelicula::addNewPelicula() {
 	system("cls");
 }
 void Pelicula:: informacionPelicula() {
+
 	std::cout << "\nNombre:\t " << this->nombre <<".";
 	std::cout << "\nDuracion: " << this->duracion << " min.";
 	std::cout << "\nAno:\t " << this->age << ".";

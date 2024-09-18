@@ -34,7 +34,7 @@ void Sistema::menuSecundario(int *opcion) {
 		system("pause");
 		break;
 	case 3:
-		menuReserva();
+		//menuReserva();
 		system("pause");
 		break;
 	case 4:
@@ -64,19 +64,39 @@ void Sistema::menuArchivo(int *ops) {
 	}while(*ops != 0 && *ops!= 3 && *ops != 2);
 }		
 
-/*falta hacerlo*/void Sistema::menuMantenimiento()
+int Sistema::menuMantenimiento()
 {
-	system("cls");
-	std::cout << "\n PROXIMAMENTE\tse incluira en mantenimiento las opciones de:\n\t\tPeliculas.\n\t\tSalas.\n\t\tHorarios;\n\n\n";
-	
-	
-} 
+	system("cls"); int opsi;
+	std::cout << "1) Pelicula\n2) Salas\n3) Horarios\n";
+	std::cin>>opsi;
+	/*switch (opsi) {
 
-/*falta hacerlo*/void Sistema::menuReserva() {
-	//system("cls");
-	std::cout << "\n PROXIMAMENTE\t se incluira la opcion de:\n\t\tReserva Peliculas.\n\n\n";
-
+	case 1:
+		
+		system("pause");
+		break;
+	case 2:
+		menuMantenimiento();
+		system("pause");
+		break;
+	case 3:
+		menuReserva();
+		system("pause");
+		break;
+	
+	}*/
+	return opsi;
 }
+void Sistema::menuMantenimientoPelicula()
+{
+}
+
+void Sistema::bucarNombreReserva(std::string nombre, ArrayPelicula)
+{
+}
+
+
+
 
 /*falta hacerlo*/void Sistema::menuVenta() {
 	system("cls");

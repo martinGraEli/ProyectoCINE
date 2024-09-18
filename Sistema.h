@@ -6,7 +6,9 @@
 #include <iostream>
 #include <string>
 #include <stdio.h>
-
+#include"ArrayHorario.h"
+#include "ArrayPelicula.h"
+#include "ArrayHorario.h"
 class Sistema {
 
 public:
@@ -15,8 +17,9 @@ public:
 	void menuSecundario(int*);
 	void menuArchivo(int*);
 	void infoEstudiante();
-	void menuMantenimiento();
-	void menuReserva();
+	int menuMantenimiento();
+		void menuMantenimientoPelicula();
+	void bucarNombreReserva(std::string,ArrayPelicula);
 	void menuVenta();
 };
 

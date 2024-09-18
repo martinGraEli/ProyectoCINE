@@ -127,18 +127,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ArrayCompras.cpp" />
+    <ClCompile Include="ArrayHorario.cpp" />
     <ClCompile Include="ArrayPelicula.cpp" />
-    <ClCompile Include="Asiento.cpp" />
+    <ClCompile Include="ArrayButaca.cpp" />
+    <ClCompile Include="Horario.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Pelicula.cpp" />
-    <ClCompile Include="Sala.cpp" />
+    <ClCompile Include="Butaca.cpp" />
+    <ClCompile Include="ProcesoDeCompra.cpp" />
     <ClCompile Include="Sistema.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArrayCompras.h" />
+    <ClInclude Include="ArrayHorario.h" />
     <ClInclude Include="ArrayPelicula.h" />
-    <ClInclude Include="Asiento.h" />
+    <ClInclude Include="ArrayButaca.h" />
+    <ClInclude Include="Horario.h" />
     <ClInclude Include="Pelicula.h" />
-    <ClInclude Include="Sala.h" />
+    <ClInclude Include="Butaca.h" />
+    <ClInclude Include="ProcesoDeCompra.h" />
     <ClInclude Include="Sistema.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
