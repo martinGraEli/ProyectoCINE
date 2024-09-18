@@ -4,17 +4,17 @@ class ProcesoDeCompra
 {
 private:
 	std::string ID;
-	std::string numerotargeta;
-	int codigoButacaCompra;
+	std::string cardNumber;
+	int seatPurchaseCode;
 	
 public:
 	ProcesoDeCompra();
 
-	void compararDatos( int);
-	void addDatosCompra(std::string, std::string);
+	void compareData( int);
+	void addPurchaseData(std::string, std::string);
 	void setID(std::string);
-	void setNumeroTargeta(std::string);
-	void setCodigoButacaCompra(int);
-	int getCodigoButacaCompra();
+	void setCardNumber(std::string);
+	void setSeatPurchaseCode(int);
+	int getSeatPurchaseCode();
 };
 

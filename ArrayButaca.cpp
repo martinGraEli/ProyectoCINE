@@ -3,44 +3,45 @@
 
 ArrayButaca::ArrayButaca()
 {
-	this->precio = 0;
-	this->cantidad=50;
-	this->asientos = new Butaca  [this->cantidad];
-	for (int i = 0; i < this->cantidad; i++) {
-		this->asientos[i] = Butaca();
+	this->price = 0;
+	this->amount=50;
+	this->seating = new Butaca  [this->amount];
+	for (int i = 0; i < this->amount; i++) {
+		this->seating[i] = Butaca();
 	}
 }
 
 
 
-void ArrayButaca::modificarAsientoPorCodigo(int codi) {
-	for (int i = 0; i < cantidad; i++) {
-		if (codi == asientos->getCodigoAsiento()) {
-			asientos[i].modificarEstadoAsiento();
+void ArrayButaca::modifySeatByCode(int codi) {
+	for (int i = 0; i < amount; i++) {
+		if (codi == seating[i].getSeatCode()) {
+			seating[i].modifySeatStatus();
 		}
+		
 }
 }
-void ArrayButaca::modificarAsiento(int pos)
+void ArrayButaca::modifyseat(int pos)
 {
-	asientos[pos].modificarEstadoAsiento();
+	seating[pos].modifySeatStatus();
 }
 
-void ArrayButaca::setPrecio(int precio)
+void ArrayButaca::setPrice(int precio)
 {
-	this->precio = precio;
+	this->price = precio;
 }
 
-void ArrayButaca::printButacas()
+void ArrayButaca::printSeats()
 {
-	for (int i = 0; i < this->cantidad; i++) {
+	for (int i = 0; i < this->amount; i++) {
 
-		if (asientos[i].getEstadoAsiento() == 0) {
+		if (seating[i].getStateSeat() == 0) {
 			std::cout << GREEN << i << RESET <<" ";
 		}
-		else if (asientos[i].getEstadoAsiento() == 1) {
+		else if (seating[i].getStateSeat() == 1) {
 			std::cout << YELLOW << i << RESET << " ";
 		}
-		else if (asientos[i].getEstadoAsiento() == 2) {
+		else if (seating[i].getStateSeat() == 2) {
 			std::cout << RED << i << RESET << " ";
 		}
 		if (i % 10 == 0&&i!=0) {
@@ -50,16 +51,16 @@ void ArrayButaca::printButacas()
 	std::cout << std::endl;
 }
 
-int ArrayButaca::getPrecio()
+int ArrayButaca::getPrice()
 {
-	return this->precio;
+	return this->price;
 }
 
-int ArrayButaca::comprarConsecutivo(int consecutivo)
+int ArrayButaca::compareConsecutive(int consecutivo)
 {
-	for (int i = 0; i < this->cantidad; i++) {
-		if (asientos[i].getCodigoAsiento() == consecutivo) {
-			return getConsecutivo(i);
+	for (int i = 0; i < this->amount; i++) {
+		if (seating[i].getSeatCode() == consecutivo) {
+			return getconsecutive(i);
 		}
 		
 	}
@@ -67,7 +68,7 @@ int ArrayButaca::comprarConsecutivo(int consecutivo)
 }
 	
 
-int ArrayButaca::getConsecutivo(int pos) 
+int ArrayButaca::getconsecutive(int pos) 
 {
-	return asientos[pos].getCodigoAsiento();;
+	return seating[pos].getSeatCode();;
 }

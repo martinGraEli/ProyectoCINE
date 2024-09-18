@@ -4,30 +4,30 @@ Butaca::Butaca() {
 	std::random_device rd;
 	std::mt19937 gen(rd());
 	std::uniform_int_distribution<> distr(1000, 9999);
-	this->codigoAsiento = distr(gen);
-	this->estadoAsiento=0;
+	this->seatCode = distr(gen);
+	this->stateSeat=0;
 }
 
-void Butaca::modificarEstadoAsiento() {
-	if (this->estadoAsiento==2) {
+void Butaca::modifySeatStatus() {
+	if (this->stateSeat==2) {
 		std::cout<<"el asiento ya se a vendido no se puede hacer cambios.\n";
 	}
-	else if (this->estadoAsiento < 2) {
-		this->estadoAsiento =this->estadoAsiento+1;
+	else if (this->stateSeat < 2) {
+		this->stateSeat =this->stateSeat+1;
 	}
 }
-int Butaca::getEstadoAsiento(){
-	return this->estadoAsiento;
+int Butaca::getStateSeat(){
+	return this->stateSeat;
 }
 
-int Butaca::getCodigoAsiento()
+int Butaca::getSeatCode()
 {
-	return this->codigoAsiento;
+	return this->seatCode;
 }
 
-void Butaca::compararCodigoAsiento(int copiaConsecutivo)
+void Butaca::compareSeatCode(int copiaConsecutivo)
 {
-	if (copiaConsecutivo == this->codigoAsiento) {
+	if (copiaConsecutivo == this->seatCode) {
 
 }
 }

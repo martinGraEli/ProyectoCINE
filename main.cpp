@@ -12,71 +12,77 @@
 int main(){
     ArrayPelicula arrayMovie;
     ArrayHorario arrayHours;
-    ArrayButaca arrayButaca;
-    ArrayCompras arrayCompras;
+    ArrayButaca arraySeats;
+    ArrayCompras arrayPurchases;
    
-    int cantidadSalas = 0;
-    int escojerNumeroPeli;
-    int escojerHorarioPeli;
-    int escogerButaca=0;
+    int numberOfRooms = 0;
+    int chooseMovieNumber;
+    int chooseMovieTime;
+    int chooseSeat=0;
 
    
    
   
   
-     int opcion;
+     int option;
     Sistema sistemita;
     do {
-        sistemita.menuPrincipal(&opcion);
+        system("cls");
+        sistemita.mainMenu(&option);
        // sistemita.menuSecundario(&opcion);
         
-        switch (opcion) {
+        switch (option) {
 
         case 1:
-            sistemita.menuArchivo(&opcion);
+            sistemita.fileMenu(&option);
             system("pause");
             break;
         case 2:
-            opcion = sistemita.menuMantenimiento();
-            if (opcion == 1) {
-                if (cantidadSalas != 0) {
-                    arrayMovie.agregarPelicula(cantidadSalas);
+            option = sistemita.MaintenanceMenu();
+            system("cls");
+            if (option == 1) {
+                if (numberOfRooms != 0) {
+                    arrayMovie.addMovie(numberOfRooms);
                 }
                 else { std::cout << "No hay salas creadas, Favor ir al apartado de sala y crear alguna.\n"; }
             }
-            else if (opcion == 2) {
-                int pre;
+            else if (option == 2) {
+                int pricee;
                 
-                std::cout << "\tDebido a que el cine fue recientemte abierto tendremos disponible una uniaca sala y una misma cantidad de butacas...\n";
-              
-                cantidadSalas++;
+                std::cout << "Debido a que el cine fue recientemte abierto tendremos disponible una uniaca sala y una misma cantidad de butacas...\n";
+                numberOfRooms++;
                 std::cout << "Digite el precio tendra la sala\n";
-                std::cin >> pre;
-                arrayButaca.setPrecio(pre);
+                std::cin >> pricee;
+                arraySeats.setPrice(pricee);
+
             
             }
-            else if (opcion == 3) {
-                arrayHours.agregarHorario();
+            else if (option == 3) {
+                arrayMovie.showVectorMovies();
+                arrayHours.addShedule();
             } 
             system("pause");
             break;
         case 3: 
            
-            arrayMovie.mostrarVectorPelis();
+            arrayMovie.showVectorMovies();
             std::cout <<"Digite el numero de la pelicula que desea ver\n";
-            std::cin >> escojerNumeroPeli;
+            std::cin >> chooseMovieNumber;
+            system("cls");
             std::cout << "La informacion de la pelicula es:\n";
-            arrayMovie.mostrarPeliculaEspesifica(escojerNumeroPeli);
+            arrayMovie.showSpecificMovie(chooseMovieNumber);
             std::cout << "Los Horarios de dicha peli son:\n";
-            arrayHours.printEspesificoHorario(arrayMovie.getNombreEspesifico(escojerNumeroPeli));
-            std::cin >> escojerHorarioPeli;
-            arrayButaca.printButacas();
+            arrayHours.printSpecificShedule(arrayMovie.getSpecificName(chooseMovieNumber));
+            std::cin >> chooseMovieTime;
+            system("cls");
+            arraySeats.printSeats();
             std::cout << "escoja el numero de butaca que desea reservar.\n";
-            std::cin >> escogerButaca;
-            std::cout << "El Precio es de: " << arrayButaca.getPrecio() << std::endl;
-            arrayButaca.modificarAsiento(escogerButaca);
-            std::cout << "FAVOR GUARDAR O APUNTAR.\nSu consecutivo o factura para poder cancelar la compra es : " << arrayButaca.getConsecutivo(escogerButaca) << std::endl;
-            arrayCompras.addNewReserva(arrayButaca.getConsecutivo(escogerButaca));
+            std::cin >> chooseSeat;
+            system("cls");
+            std::cout << "El Precio es de: " << arraySeats.getPrice() << std::endl;
+            arraySeats.modifyseat(chooseSeat);
+            std::cout << "FAVOR GUARDAR O APUNTAR.\nSu consecutivo o factura para poder cancelar la compra es : " << arraySeats.getconsecutive(chooseSeat) << std::endl;
+            arrayPurchases.addNewReserve(arraySeats.getconsecutive(chooseSeat));
             system("pause");
             break;
         case 4:
@@ -84,19 +90,19 @@ int main(){
             std::string id, numTargeta;
             std::cout << "Digite el consecutivo que se le brindo a la hora de la reserva.\n";
             std::cin >> confirmacionConsecutivo;
-            if (confirmacionConsecutivo == arrayButaca.comprarConsecutivo(confirmacionConsecutivo)) {
+            if (confirmacionConsecutivo == arraySeats.compareConsecutive(confirmacionConsecutivo)) {
                 std::cout << "Digite su ID\n";
                 std::cin >> id;
                 std::cout << "Digite su numero de targeta\n";
                 std::cin >> numTargeta;
-                arrayCompras.addNewCompra(id, numTargeta, confirmacionConsecutivo);
-                arrayButaca.modificarAsientoPorCodigo(confirmacionConsecutivo);
+                arrayPurchases.addNewPurchases(id, numTargeta, confirmacionConsecutivo);
+                arraySeats.modifySeatByCode(confirmacionConsecutivo);
             }
             
             system("pause");
             break;
         }
-    } while (opcion != 0);
+    } while (option != 0);
     
 }
 

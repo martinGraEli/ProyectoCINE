@@ -2,13 +2,13 @@
 
 ArrayHorario::ArrayHorario()
 {
-	this->vectorHorario = new Horario[sizeMax];
+	this->vectorSchedule = new Horario[sizeMax];
 	for (int i = 0; i < sizeMax; i++) {
-		vectorHorario[i] = Horario();
+		vectorSchedule[i] = Horario();
 	}
 }
 
-void ArrayHorario::agregarHorario()
+void ArrayHorario::addShedule()
 {
 	int hora, minutos;
 	std::string name;
@@ -21,29 +21,29 @@ void ArrayHorario::agregarHorario()
 	std::cin >>hora;
 	std::cout << "Digite los minutos de inicio de la pelicula\n";
 	std::cin >> minutos;
-	vectorHorario[this->cantidad].setNombrePeliHorario(name);
-	vectorHorario[this->cantidad].setHoraInicial(hora);
-	vectorHorario[this->cantidad].setMinInicial(minutos);
-	vectorHorario[this->cantidad].setDia(dia);
-	this->cantidad = this->cantidad + 1;
+	vectorSchedule[this->amount].setNameMovieTime(name);
+	vectorSchedule[this->amount].setStartTime(hora);
+	vectorSchedule[this->amount].setInitialMinutes(minutos);
+	vectorSchedule[this->amount].setDay(dia);
+	this->amount = this->amount + 1;
 }
 
-void ArrayHorario::setCantidad(int can)
+void ArrayHorario::setAmount(int can)
 {
-	this->cantidad = can;
+	this->amount = can;
 }
 
-int ArrayHorario::getCantidad()
+int ArrayHorario::getAmount()
 {
-	return this->cantidad;
+	return this->amount;
 }
 
-void ArrayHorario::printEspesificoHorario(std::string nombrePeli)
+void ArrayHorario::printSpecificShedule(std::string nombrePeli)
 {
-	for (int i = 0; i < cantidad; i++) {
-		if (nombrePeli == vectorHorario[i].getHorarioPeliName()) {
+	for (int i = 0; i < amount; i++) {
+		if (nombrePeli == vectorSchedule[i].getNameMovieTime()) {
 			std::cout << "Horario #" << i << "\n\t";
-			vectorHorario[i].PrintHorario();
+			vectorSchedule[i].printSchedule();
 		}
 	}
 }

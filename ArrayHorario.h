@@ -4,15 +4,15 @@ class ArrayHorario
 {
 private:
 	int sizeMax = 50;
-	Horario* vectorHorario;
-	int cantidad = 0;
+	Horario* vectorSchedule;
+	int amount = 0;
 public:
 	ArrayHorario();
-	void agregarHorario();
-	//void mostrarVectorHorario();
-	void setCantidad(int);
+	void addShedule();
+	
+	void setAmount(int);
 
-	int getCantidad();
-	void printEspesificoHorario(std::string);
+	int getAmount();
+	void printSpecificShedule(std::string);
 };
 

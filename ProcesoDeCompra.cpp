@@ -3,21 +3,21 @@
 ProcesoDeCompra::ProcesoDeCompra()
 {
 	this->ID = " ";
-	this->numerotargeta = " ";
-	this->codigoButacaCompra = 0;
+	this->cardNumber = " ";
+	this->seatPurchaseCode = 0;
 	
 }
 
 
 
-void ProcesoDeCompra::compararDatos(int codigoButaca)
+void ProcesoDeCompra::compareData(int codigoButaca)
 {
 }
 
-void ProcesoDeCompra::addDatosCompra(std::string ID, std::string numTargeta)
+void ProcesoDeCompra::addPurchaseData(std::string ID, std::string numTargeta)
 {
 	this->ID = ID;
-	this->numerotargeta = numerotargeta;
+	this->cardNumber = cardNumber;
 
 }
 
@@ -26,15 +26,15 @@ void ProcesoDeCompra::setID(std::string ID)
 	this->ID = ID;
 }
 
-void ProcesoDeCompra::setNumeroTargeta(std::string numerotargeta)
-{this->numerotargeta = numerotargeta;
+void ProcesoDeCompra::setCardNumber(std::string numerotargeta)
+{this->cardNumber = numerotargeta;
 }
 
-void ProcesoDeCompra::setCodigoButacaCompra(int codigoButacaCompra)
-{this->codigoButacaCompra = codigoButacaCompra;
+void ProcesoDeCompra::setSeatPurchaseCode(int codigoButacaCompra)
+{this->seatPurchaseCode = codigoButacaCompra;
 }
 
-int ProcesoDeCompra::getCodigoButacaCompra()
+int ProcesoDeCompra::getSeatPurchaseCode()
 {
-	return this->codigoButacaCompra;
+	return this->seatPurchaseCode;
 }

@@ -5,16 +5,16 @@ class ArrayPelicula
 private:
 
 	int sizeMax = 50; //modificar para que el usuario elija la cantidad maxima
-	Pelicula *vectorPelis;
-	int cantidad = 0;
+	Pelicula *vectorMovies;
+	int amount = 0;
 public:
 	ArrayPelicula();
-	void agregarPelicula(int);
-	void mostrarVectorPelis();
-	void mostrarPeliculaEspesifica(int);
-	void setCantidad(int);
-	int getCantidad();
-	std::string getNombreEspesifico(int);
+	void addMovie(int);
+	void showVectorMovies();
+	void showSpecificMovie(int);
+	void setAmount(int);
+	int getAmount();
+	std::string getSpecificName(int);
 	
 };
 

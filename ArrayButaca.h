@@ -25,19 +25,19 @@ class ArrayButaca
 private:	/*int sizeMax = 50; //modificar para que el usuario elija la cantidad maxima
 	   Pelicula* vectorPelis;
 	   int cantidad = 0;*/
-	int precio;
-	int cantidad;
+	int price;
+	int amount;
 	
-	Butaca *asientos;
+	Butaca *seating;
 public:
 	ArrayButaca();
 	
-	void modificarAsientoPorCodigo(int);
-	void modificarAsiento(int);
-	void setPrecio(int);
-	void printButacas();
-	int getPrecio();
-	int comprarConsecutivo(int);
-	int getConsecutivo(int);
+	void modifySeatByCode(int);
+	void modifyseat(int);
+	void setPrice(int);
+	void printSeats();
+	int getPrice();
+	int compareConsecutive(int);
+	int getconsecutive(int);
 };
 

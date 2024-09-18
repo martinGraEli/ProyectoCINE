@@ -5,36 +5,36 @@
 class Horario 
 {
 private: 
-	std::string nombrePeliHorario;
-	std::string dia;
+	std::string nameMovieTime;
+	std::string day;
 
-	int horaInicial;
-	int minInicial;
+	int startTime;
+	int initialMinutes;
 
-	int horaFinal;
-	int minFinal;
+	int finalHour;
+	int finalMinutes;
 
 public:
 	
 	Horario();
-	void setNombrePeliHorario(std::string);
-	void setDia(std::string);
-	void setHoraInicial(int);
-	void setMinInicial(int);
+	void setNameMovieTime(std::string);
+	void setDay(std::string);
+	void setStartTime(int);
+	void setInitialMinutes(int);
 
 	
-	void setMinutoAndHoraFinal(Pelicula);
+	void setFinalMinuteAndHour(Pelicula);
 	
 
-	std::string getDia();
+	std::string getDay();
 
-	std::string getHorarioPeliName();
-	int getHoraInicial();
-	int getMinInicial();
+	std::string getNameMovieTime();
+	int getStartTime();
+	int getInitialMinutes();
 
-	int getHoraFinal();
-	int getMinFinal();
+	int getFinalHour();
+	int getFinalMinutes();
 	
-	void PrintHorario();
+	void printSchedule();
 };
 

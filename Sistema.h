@@ -13,14 +13,12 @@ class Sistema {
 
 public:
 
-	void menuPrincipal(int *);
-	void menuSecundario(int*);
-	void menuArchivo(int*);
+	void mainMenu(int *);
+	
+	void fileMenu(int*);
 	void infoEstudiante();
-	int menuMantenimiento();
-		void menuMantenimientoPelicula();
-	void bucarNombreReserva(std::string,ArrayPelicula);
-	void menuVenta();
+	int MaintenanceMenu();
+
 };
 
 

@@ -8,11 +8,11 @@
 class Pelicula {
 
 private:
-	std::string nombre;
+	std::string name;
 	int age;
-	int duracion;
-	std::string pais;
-	std::string resena;
+	int duration;
+	std::string country;
+	std::string review;
 	
 	
 	
@@ -20,14 +20,13 @@ private:
 public:
 	Pelicula();
 	Pelicula(std::string, int, int, std::string, std::string);
-	std::string getNombre();
-	std::string getResena();
+	std::string getName();
+	std::string getReview();
 	int getAge();
-	int getDuracion();
-	std::string getPais();
-	int getSalaAVer();
-	void addNewPelicula(int);
-	void informacionPelicula(); 
+	int getDuration();
+	std::string getCountry();
+	void addNewMovie(int);
+	void movieInformation(); 
 	
 	
  };

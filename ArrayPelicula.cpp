@@ -1,37 +1,37 @@
 #include "ArrayPelicula.h"
 ArrayPelicula::ArrayPelicula() {
-	this->vectorPelis = new Pelicula[sizeMax];
+	this->vectorMovies = new Pelicula[sizeMax];
 	for (int i = 0; i < sizeMax; i++) {
-		vectorPelis[i] = Pelicula();
+		vectorMovies[i] = Pelicula();
 	}
  }
-void ArrayPelicula::agregarPelicula(int cantSala)//hay que crear la pelicula por medio del constructor
+void ArrayPelicula::addMovie(int cantSala)//hay que crear la pelicula por medio del constructor
 {
 
-	vectorPelis[this->cantidad].addNewPelicula(cantSala);
-	cantidad=cantidad + 1;
+	vectorMovies[this->amount].addNewMovie(cantSala);
+	amount=amount + 1;
 }
-void ArrayPelicula::mostrarVectorPelis() {
-	for (int i = 0; i< cantidad; i++) {
+void ArrayPelicula::showVectorMovies() {
+	for (int i = 0; i< amount; i++) {
 		std::cout << "Pelicula #: " << i<<std::endl;
-		std::cout << vectorPelis[i].getNombre() << std::endl;
+		std::cout << vectorMovies[i].getName() << std::endl;
 		
 	  }
 }
-void ArrayPelicula::mostrarPeliculaEspesifica(int pos)
+void ArrayPelicula::showSpecificMovie(int pos)
 {
-	vectorPelis[pos].informacionPelicula();
+	vectorMovies[pos].movieInformation();
 }
-void ArrayPelicula::setCantidad(int cant) {
-	this->cantidad = cant;
+void ArrayPelicula::setAmount(int cant) {
+	this->amount = cant;
 }
-int ArrayPelicula::getCantidad() {
-	return this->cantidad;
+int ArrayPelicula::getAmount() {
+	return this->amount;
 }
 
-std::string ArrayPelicula::getNombreEspesifico(int pos)
+std::string ArrayPelicula::getSpecificName(int pos)
 {
-	return vectorPelis[pos].getNombre();
+	return vectorMovies[pos].getName();
 }
 
 

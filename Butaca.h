@@ -7,19 +7,16 @@ class Butaca
 private:
 
 	
-	int codigoAsiento;
-	int estadoAsiento;
+	int seatCode;
+	int stateSeat;
 	
 	
 public:
 	Butaca();
 	
-	//void addNewAsiento();
-	
-	void modificarEstadoAsiento();
-	int getEstadoAsiento();
-	//void mostrarSalaPruba();
-	int getCodigoAsiento();
-	void compararCodigoAsiento(int);
+	void modifySeatStatus();
+	int getStateSeat();
+	int getSeatCode();
+	void compareSeatCode(int);
 };
 
